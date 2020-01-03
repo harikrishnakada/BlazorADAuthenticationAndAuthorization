@@ -1,0 +1,10 @@
+﻿<AuthorizeView>
+    <Authorized>
+        Hello, @context.User.Claims.FirstOrDefault(x => x.Type == "preferred_username")?.Value;
+
+        <a href="AzureAD/Account/SignOut">Log out</a>
+    </Authorized>
+    <NotAuthorized>
+        <a href="AzureAD/Account/SignIn">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,5 +1,8 @@
 ﻿@page "/fetchdata"
 
+@*Here Authorize attribute expectes an input which can be your policy name which you have added in the start up class.*@
+@attribute [Authorize("Management")]
+
 @using BlazorADAuthenticationAndAuthorization.Data
 @inject WeatherForecastService ForecastService
 
